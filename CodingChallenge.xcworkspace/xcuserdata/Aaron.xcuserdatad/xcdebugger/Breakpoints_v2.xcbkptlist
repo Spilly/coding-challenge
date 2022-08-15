@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1483880E-E193-40CE-ABE5-998ABCEFA24D"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AA6E66B-1AD4-4367-A455-3C564B64ECA9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodingChallenge/CodingChallengeTests/CodingChallengeTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4AA6E66B-1AD4-4367-A455-3C564B64ECA9 - b559e7e0edce2bc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodingChallengeTests.CodingChallengeTests.testExample() throws -&gt; ()"
+                  moduleName = "CodingChallengeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Aaron/Documents/GitHub/coding-challenge/CodingChallenge/CodingChallengeTests/CodingChallengeTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "4AA6E66B-1AD4-4367-A455-3C564B64ECA9 - b559e7e0edce2bc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodingChallengeTests.CodingChallengeTests.testExample() throws -&gt; ()"
+                  moduleName = "CodingChallengeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Aaron/Documents/GitHub/coding-challenge/CodingChallenge/CodingChallengeTests/CodingChallengeTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
