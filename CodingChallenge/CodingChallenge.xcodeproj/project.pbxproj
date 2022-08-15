@@ -14,6 +14,7 @@
 		931ADC8C28AAF11E009DA95B /* NetworkTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC8B28AAF11E009DA95B /* NetworkTypes.swift */; };
 		931ADC8E28AAF194009DA95B /* NetworkExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC8D28AAF194009DA95B /* NetworkExtensions.swift */; };
 		931ADC9028AAF5D4009DA95B /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC8F28AAF5D4009DA95B /* NetworkClientTests.swift */; };
+		931ADC9228AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC9128AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift */; };
 		9356826528A6F72F002532CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356826428A6F72F002532CA /* User.swift */; };
 		9356826828A6FBF7002532CA /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356826728A6FBF7002532CA /* NetworkClient.swift */; };
 		9356826A28A81743002532CA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356826928A81743002532CA /* Endpoint.swift */; };
@@ -49,6 +50,7 @@
 		931ADC8B28AAF11E009DA95B /* NetworkTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTypes.swift; sourceTree = "<group>"; };
 		931ADC8D28AAF194009DA95B /* NetworkExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtensions.swift; sourceTree = "<group>"; };
 		931ADC8F28AAF5D4009DA95B /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
+		931ADC9128AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoRestHttpRequestErrorTests.swift; sourceTree = "<group>"; };
 		9356826428A6F72F002532CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9356826728A6FBF7002532CA /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		9356826928A81743002532CA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				93F9080E28A5EFC90067126D /* CodingChallengeRunthrough.swift */,
 				931ADC8428AAE004009DA95B /* Mocks.swift */,
 				931ADC8F28AAF5D4009DA95B /* NetworkClientTests.swift */,
+				931ADC9128AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift */,
 			);
 			path = CodingChallengeTests;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			files = (
 				93F9080F28A5EFC90067126D /* CodingChallengeRunthrough.swift in Sources */,
 				931ADC8528AAE004009DA95B /* Mocks.swift in Sources */,
+				931ADC9228AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift in Sources */,
 				931ADC9028AAF5D4009DA95B /* NetworkClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
