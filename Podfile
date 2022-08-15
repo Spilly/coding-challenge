@@ -8,13 +8,9 @@ target 'CodingChallenge' do
 
   # Pods for CodingChallenge
   pod 'CocoaLumberjack/Swift'
-  
+
   target 'CodingChallengeTests' do
     inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'CodingChallengeUITests' do
     # Pods for testing
   end
 
