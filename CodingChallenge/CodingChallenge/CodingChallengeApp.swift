@@ -13,22 +13,7 @@ struct CodingChallengeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
-        .onChange(of: scenePhase) { (newScenePhase) in
-            switch newScenePhase {
-            case .active:
-                // The scene is in the foreground and interactive.
-                print("active")
-            case .inactive:
-                // The scene is in the foreground but should pause its work.
-                print("inactive")
-            case .background:
-                // The scene isn’t currently visible in the UI.
-                print("background")
-            @unknown default:
-                break
-            }
+            ContentView(viewModel: CodeChallengeViewModel())
         }
     }
 }

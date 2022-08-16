@@ -54,11 +54,9 @@ class NetworkClientTests: XCTestCase {
 
         if case .success(_) = response {
             XCTFail("Shouldn't succeed when getting 404 back from the endpoint")
-        } else if case let .failure(error) = response {
-            if case let .serverError(serverError, message) = error {
-                XCTAssertNil(serverError)
-                XCTAssertEqual(message, "not found")
-            }
+        } else if case let .failure(error) = response, case let .serverError(serverError, message) = error {
+            XCTAssertNil(serverError)
+            XCTAssertEqual(message, "404")
         }
     }
 
@@ -110,7 +108,7 @@ class NetworkClientTests: XCTestCase {
         } else if case let .failure(error) = response {
             if case let .serverError(serverError, message) = error {
                 XCTAssertNil(serverError)
-                XCTAssertEqual(message, "not found")
+                XCTAssertEqual(message, "404")
             }
         }
     }
@@ -150,7 +148,7 @@ class NetworkClientTests: XCTestCase {
         } else if case let .failure(error) = response {
             if case let .serverError(serverError, message) = error {
                 XCTAssertNil(serverError)
-                XCTAssertEqual(message, "not found")
+                XCTAssertEqual(message, "404")
             }
         }
     }
@@ -190,7 +188,7 @@ class NetworkClientTests: XCTestCase {
         } else if case let .failure(error) = response {
             if case let .serverError(serverError, message) = error {
                 XCTAssertNil(serverError)
-                XCTAssertEqual(message, "not found")
+                XCTAssertEqual(message, "404")
             }
         }
     }

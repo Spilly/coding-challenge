@@ -123,7 +123,7 @@ class NetworkClient: GoRestHttpRequestProtocol {
                 returnError = error._code == URLError.timedOut.rawValue ? .networkTimeOut : .serverError(error: error, message: nil)
             } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode >= 400 {
-                    returnError = .serverError(error: nil, message: HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode))
+                    returnError = .serverError(error: nil, message: String(httpResponse.statusCode))
                 } else if let jsonData = data {
                     if let totalPages = httpResponse.allHeaderFields["x-pagination-pages"] {
                         DDLogInfo("Total pages: \(totalPages)")

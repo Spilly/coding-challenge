@@ -15,6 +15,7 @@
 		931ADC8E28AAF194009DA95B /* NetworkExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC8D28AAF194009DA95B /* NetworkExtensions.swift */; };
 		931ADC9028AAF5D4009DA95B /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC8F28AAF5D4009DA95B /* NetworkClientTests.swift */; };
 		931ADC9228AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC9128AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift */; };
+		931ADC9528AB249C009DA95B /* CodeChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC9428AB249C009DA95B /* CodeChallengeViewModel.swift */; };
 		9356826528A6F72F002532CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356826428A6F72F002532CA /* User.swift */; };
 		9356826828A6FBF7002532CA /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356826728A6FBF7002532CA /* NetworkClient.swift */; };
 		9356826A28A81743002532CA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356826928A81743002532CA /* Endpoint.swift */; };
@@ -22,7 +23,6 @@
 		93F9080028A5EFC70067126D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F907FF28A5EFC70067126D /* ContentView.swift */; };
 		93F9080228A5EFC90067126D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F9080128A5EFC90067126D /* Assets.xcassets */; };
 		93F9080528A5EFC90067126D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F9080428A5EFC90067126D /* Preview Assets.xcassets */; };
-		93F9080F28A5EFC90067126D /* CodingChallengeRunthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9080E28A5EFC90067126D /* CodingChallengeRunthrough.swift */; };
 		BDFA869CFB2CD0679D60446C /* Pods_CodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F02EE1CA05B7262BE2B32FE /* Pods_CodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +51,7 @@
 		931ADC8D28AAF194009DA95B /* NetworkExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtensions.swift; sourceTree = "<group>"; };
 		931ADC8F28AAF5D4009DA95B /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
 		931ADC9128AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoRestHttpRequestErrorTests.swift; sourceTree = "<group>"; };
+		931ADC9428AB249C009DA95B /* CodeChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallengeViewModel.swift; sourceTree = "<group>"; };
 		9356826428A6F72F002532CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9356826728A6FBF7002532CA /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		9356826928A81743002532CA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		93F9080128A5EFC90067126D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93F9080428A5EFC90067126D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93F9080A28A5EFC90067126D /* CodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93F9080E28A5EFC90067126D /* CodingChallengeRunthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeRunthrough.swift; sourceTree = "<group>"; };
 		DE0E3B62D16EDA53029F0491 /* Pods_CodingChallenge_CodingChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallenge_CodingChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCAFF78C9DCDF0267964B76 /* Pods-CodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-CodingChallenge/Pods-CodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +108,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		931ADC9328AB2485009DA95B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				931ADC9428AB249C009DA95B /* CodeChallengeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9356826328A6F712002532CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +158,7 @@
 		93F907FC28A5EFC70067126D /* CodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				931ADC9328AB2485009DA95B /* ViewModel */,
 				931ADC8628AAF094009DA95B /* Protocols */,
 				9356826328A6F712002532CA /* Models */,
 				9356826628A6F81E002532CA /* Networking */,
@@ -172,7 +181,6 @@
 		93F9080D28A5EFC90067126D /* CodingChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				93F9080E28A5EFC90067126D /* CodingChallengeRunthrough.swift */,
 				931ADC8428AAE004009DA95B /* Mocks.swift */,
 				931ADC8F28AAF5D4009DA95B /* NetworkClientTests.swift */,
 				931ADC9128AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift */,
@@ -362,6 +370,7 @@
 				93F907FE28A5EFC70067126D /* CodingChallengeApp.swift in Sources */,
 				931ADC8E28AAF194009DA95B /* NetworkExtensions.swift in Sources */,
 				9356826528A6F72F002532CA /* User.swift in Sources */,
+				931ADC9528AB249C009DA95B /* CodeChallengeViewModel.swift in Sources */,
 				931ADC8C28AAF11E009DA95B /* NetworkTypes.swift in Sources */,
 				931ADC8828AAF0A7009DA95B /* GoRestHttpRequestProtocol.swift in Sources */,
 				9356826828A6FBF7002532CA /* NetworkClient.swift in Sources */,
@@ -373,7 +382,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F9080F28A5EFC90067126D /* CodingChallengeRunthrough.swift in Sources */,
 				931ADC8528AAE004009DA95B /* Mocks.swift in Sources */,
 				931ADC9228AB0EF8009DA95B /* GoRestHttpRequestErrorTests.swift in Sources */,
 				931ADC9028AAF5D4009DA95B /* NetworkClientTests.swift in Sources */,
