@@ -21,13 +21,17 @@ class NetworkClient: GoRestHttpRequestProtocol {
     }
 
     func getUser(id: Int) -> Result<User, GoRestHttpRequestError> {
-        let urlRequest = URLRequest(url: Endpoint.user(id: id).url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
+        guard let url = Endpoint.user(id: id).url else {
+            return .failure(.invalidUrl)
+        }
+
+        let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
         let result = makeRequest(urlRequest)
 
         switch result {
         case .success(let data):
-            if let jsonData = data {
-                let user = try! JSONDecoder().decode(User.self, from: jsonData)
+            if let jsonData = data,
+               let user = try? JSONDecoder().decode(User.self, from: jsonData) {
                 return .success(user)
             }
 
@@ -43,13 +47,17 @@ class NetworkClient: GoRestHttpRequestProtocol {
     }
 
     func getUsers(page: Int) -> Result< [User], GoRestHttpRequestError> {
-        let urlRequest = URLRequest(url: Endpoint.users(page: page).url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
+        guard let url = Endpoint.users(page: page).url else {
+            return .failure(.invalidUrl)
+        }
+
+        let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
         let result = makeRequest(urlRequest)
 
         switch result {
         case .success(let data):
-            if let jsonData = data {
-                let users = try! JSONDecoder().decode([User].self, from: jsonData)
+            if let jsonData = data,
+               let users = try? JSONDecoder().decode([User].self, from: jsonData) {
                 return .success(users)
             }
 
@@ -61,7 +69,11 @@ class NetworkClient: GoRestHttpRequestProtocol {
     }
 
     func updateUser(_ user: User) -> Result< User, GoRestHttpRequestError> {
-        var urlRequest = URLRequest(url: Endpoint.user(id: user.id).url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
+        guard let url = Endpoint.user(id: user.id).url else {
+            return .failure(.invalidUrl)
+        }
+
+        var urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
         urlRequest.httpMethod = HttpMethod.PATCH.rawValue
 
         do {
@@ -77,8 +89,8 @@ class NetworkClient: GoRestHttpRequestProtocol {
 
         switch result {
         case .success(let data):
-            if let jsonData = data {
-                let user = try! JSONDecoder().decode(User.self, from: jsonData)
+            if let jsonData = data,
+               let user = try? JSONDecoder().decode(User.self, from: jsonData) {
                 return .success(user)
             }
 
@@ -94,15 +106,19 @@ class NetworkClient: GoRestHttpRequestProtocol {
     }
 
     func deleteUser(id: Int) -> Result<User, GoRestHttpRequestError> {
-        var urlRequest = URLRequest(url: Endpoint.user(id: id).url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
+        guard let url = Endpoint.user(id: id).url else {
+            return .failure(.invalidUrl)
+        }
+
+        var urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: networkTimeout)
         urlRequest.httpMethod = HttpMethod.DELETE.rawValue
 
         let result = makeRequest(urlRequest)
 
         switch result {
         case .success(let data):
-            if let jsonData = data {
-                let user = try! JSONDecoder().decode(User.self, from: jsonData)
+            if let jsonData = data,
+               let user = try? JSONDecoder().decode(User.self, from: jsonData) {
                 return .success(user)
             }
 

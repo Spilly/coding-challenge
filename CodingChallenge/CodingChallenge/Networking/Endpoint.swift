@@ -11,7 +11,7 @@ enum Endpoint {
     case user(id: Int)
     case users(page: Int)
 
-    var url: URL {
+    var url: URL? {
         switch self {
         case .user(let id):
             return .makeForEndpoint("users/\(id)")
@@ -22,8 +22,8 @@ enum Endpoint {
 }
 
 private extension URL {
-    static func makeForEndpoint(_ endpoint: String) -> URL {
-        URL(string: "https://gorest.co.in/public/v2/\(endpoint)")!
+    static func makeForEndpoint(_ endpoint: String) -> URL? {
+        return URL(string: "https://gorest.co.in/public/v2/\(endpoint)")
     }
 }
 

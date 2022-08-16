@@ -33,7 +33,7 @@ class NetworkClientTests: XCTestCase {
             print("Error encoding the User data, ensur User object conforms to the codable protocol")
         }
 
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url, statusCode: 200, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url!, statusCode: 200, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.getUser(stubUser)
@@ -47,7 +47,7 @@ class NetworkClientTests: XCTestCase {
 
     func testGetUserStatusError() throws {
         let mockGetUserCall = NetworkSessionMock()
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url, statusCode: 404, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url!, statusCode: 404, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.getUser(id: stubUserId)
@@ -84,7 +84,7 @@ class NetworkClientTests: XCTestCase {
             print("Error encoding the User data, ensur User object conforms to the codable protocol")
         }
 
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url, statusCode: 200, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url!, statusCode: 200, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.getUsers(page: 3)
@@ -98,7 +98,7 @@ class NetworkClientTests: XCTestCase {
 
     func testGetUsersStatusError() throws {
         let mockGetUserCall = NetworkSessionMock()
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url, statusCode: 404, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url!, statusCode: 404, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.getUsers(page: 3)
@@ -123,7 +123,7 @@ class NetworkClientTests: XCTestCase {
             print("Error encoding the User data, ensur User object conforms to the codable protocol")
         }
 
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url, statusCode: 200, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url!, statusCode: 200, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.updateUser(stubUser)
@@ -138,7 +138,7 @@ class NetworkClientTests: XCTestCase {
 
     func testUpdateUserStatusError() throws {
         let mockGetUserCall = NetworkSessionMock()
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url, statusCode: 404, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url!, statusCode: 404, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.updateUser(stubUser)
@@ -163,7 +163,7 @@ class NetworkClientTests: XCTestCase {
             print("Error encoding the User data, ensur User object conforms to the codable protocol")
         }
 
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url, statusCode: 200, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUser.id).url!, statusCode: 200, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.deleteUser(stubUser)
@@ -178,7 +178,7 @@ class NetworkClientTests: XCTestCase {
 
     func testDeleteUserStatusError() throws {
         let mockGetUserCall = NetworkSessionMock()
-        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url, statusCode: 404, httpVersion: nil, headerFields: nil)
+        mockGetUserCall.response = HTTPURLResponse(url: Endpoint.user(id: stubUserId).url!, statusCode: 404, httpVersion: nil, headerFields: nil)
 
         let mockRestClient = NetworkClient(networkTimeout: 5.0, session: mockGetUserCall)
         let response = mockRestClient.deleteUser(stubUser)
